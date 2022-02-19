@@ -1,12 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
 .navbar{
     background-color: #ff3434d2;
 }
 
-body{
+.bg{
 
     background-image: url(https://thumbs.gfycat.com/HugeVengefulAmericanbittern-size_restricted.gif);
+    min-height: 652px;
+    background-position: center;
+    background-repeat:  no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
 }
 
+.txt{
+    color: aliceblue;
+    font-family: 'VT323', monospace;
+    
+}
 
 
 
