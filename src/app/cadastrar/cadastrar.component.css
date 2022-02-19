@@ -1,27 +1,41 @@
-#img-bg{    
-    min-height: 695px;
+
+@import url('');
+
+#eevee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg{
+    background-image: url(../../assets/img/background.png);
+    min-height: 962px;
     background-position: center;
     background-repeat:  no-repeat;
     background-size: cover;
     display: flex;
-    justify-items: center;   
+    align-items: center;
 }
+
 
 .m-20{
     margin-left: 20px;
-    background-color: blueviolet;
+    background-color:#ff3434d7;
     color: #fff;
 }
 
 .btn:hover{
-    background-color: darkgray;
+    background-color: #28226fbb;
     color: black;
 }
 .box{
+    
     box-sizing: border-box;
-    box-shadow: 2px 2px 2px 2px rgba(100, 15, 160, 0.371);
+    box-shadow: 2px 2px 18px #28226fbb;
     border-radius: 5px;
-
+    border-top: 1px solid rgba(232, 19, 19, 0.5);
+    border-right: 1px solid rgba(235, 26, 26, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 input{
@@ -30,4 +44,22 @@ input{
 
 select{
     font-size: 12px;
+}
+.font{
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    
+}
+
+.font-login{
+    font-family: 'VT323', monospace;
+    font-size: 36pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pokebola{
+    width: 67px;
+    height: auto;
+    margin-left: 0;
 }

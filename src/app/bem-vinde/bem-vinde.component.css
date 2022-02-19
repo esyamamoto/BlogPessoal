@@ -1,0 +1,49 @@
+.navbar{
+    background-color: #ff3434d2;
+}
+
+body{
+
+    background-image: url(https://thumbs.gfycat.com/HugeVengefulAmericanbittern-size_restricted.gif);
+}
+
+
+
+
+
+/*rodape*/
+
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+
+}   
+.fa-brands{
+    font-size: 35pt;
+    color: rgb(255, 240, 240);
+    padding: 10px;
+}
+.fa-facebook:hover{
+    color: #3b5998;
+}
+.fa-instagram:hover{
+    color: #C13584;
+}
+.fa-github:hover{
+    color: black;
+}
+.fa-linkedin:hover{
+    color:#0a66c2;
+}
+.bg-footer{
+    background-color: rgba(253, 47, 47, 0.693) ;
+}
+
+.bg-copyright{
+    background-color: rgb(26, 24, 31) !important;
+}
