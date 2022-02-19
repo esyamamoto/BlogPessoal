@@ -1,14 +1,14 @@
 
 @import url('');
 
-#eevee{
+#pok{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .bg{
     background-image: url(../../assets/img/background.png);
-    min-height: 962px;
+    min-height:975px;
     background-position: center;
     background-repeat:  no-repeat;
     background-size: cover;
@@ -30,10 +30,10 @@
 .box{
     
     box-sizing: border-box;
-    box-shadow: 2px 2px 18px #28226fbb;
+    box-shadow: 15px 15px 18px #28226fbb;
     border-radius: 5px;
-    border-top: 1px solid rgba(232, 19, 19, 0.5);
-    border-right: 1px solid rgba(235, 26, 26, 0.5);
+    border-top: 1px solid rgba(27, 31, 134, 0.5);
+    border-right: 1px solid rgba(36, 23, 153, 0.5);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -48,17 +48,20 @@ select{
 .font{
     font-family: 'VT323', monospace;
     font-size: 18px;
+    color: aliceblue;
     
 }
 
 .font-login{
+   color: aliceblue;
     font-family: 'VT323', monospace;
-    font-size: 36pt;
+    font-size: 42pt;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .pokebola{
+   
     width: 67px;
     height: auto;
     margin-left: 0;
