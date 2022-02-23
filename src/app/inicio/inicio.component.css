@@ -9,11 +9,15 @@
     background-size    : cover;
     display            : flex;
     align-items        : center;
+    opacity: 0,2;
 }
 
 .txt {
     color      : aliceblue;
     font-family: 'VT323', monospace;
+    font-size: 35pt;
+    font-weight: bold;
+    text-shadow: 3px 3px black;
 }
 
 .fs-50 {
@@ -60,4 +64,54 @@
     color      : #523d83;
     font-weight: bold;
     font-size  : 14pt;
+}
+
+.modal-bg{
+box-shadow: 20px 20px 58px rgba(82, 61, 131, 0.25) ;
+ border-top: 1px solid rgba(82, 61, 131, 0.5);
+ border-right: 1px solid rgba(82, 61, 131, 0.5);
+ backdrop-filter: blur(8px);
+}
+
+.bg-post{
+    
+    box-shadow: 20px 20px 58px rgba(82, 61, 131, 0.25);
+    border-top: 1px solid rgba(82, 61, 131, 0.5);
+    border-right: 1px solid rgba(82, 61, 131, 0.5);
+    backdrop-filter: blur(8px); 
+    background-image   : url(https://thumbs.gfycat.com/HugeVengefulAmericanbittern-max-1mb.gif);
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+}
+
+.btn-confirm{
+font-size: 15pt;
+}
+
+.btn-cancel{
+    font-size: 15pt;
+}
+
+.modal-title{
+    font-size: 35pt;
+    color: aliceblue;
+    font-weight: bold;
+    text-shadow: 3px 3px black;
+}
+
+.form-group{
+    font-size: 20pt;
+    text-shadow: 2px 2px 2px  black;
+    font-weight: bold;
+}
+
+.cadastro-tema{
+    text-decoration: none;
+    color: #a179ff;
+}
+
+.btn-confirm:hover{
+    background-color: #a179ff;
+    color: black;
 }
