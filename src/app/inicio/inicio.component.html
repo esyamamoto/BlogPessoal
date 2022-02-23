@@ -1,1 +1,51 @@
-<p>inicio works!</p>
+<div class="container-fluid">
+
+    <div class="row bg-inicio align-items-center">
+        <div class="col-md-6">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 txt">
+                    <h1 class="fs-50">Seja bem vinde!</h1>
+                    <h5 class="fs-20">Expresse aqui suas opiniões e pensamentos!</h5>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 d-flex justify-content-center">
+            <img class="gameboy" src="../../assets/img/gameboy1.png" alt="">
+                   <button class="btn btn-post" data-toggle="modal" data-target="#novaPostagem" >Nova postagem</button>
+                   <a class="btn btn-outline btn-see" href="#postagens">Ver postagens</a>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+ <div class="container md-5 mt-5" id="postagens">
+
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+          <button class="nav-link active navs-tabs" id="nav-todasPostagens-tab" data-bs-toggle="tab" data-bs-target="#todasPostagens" type="button" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens</button>
+
+          <button class="nav-link navs-tabs" id="nav-minhasPostagens-tab" data-bs-toggle="tab" data-bs-target="#minhasPostagens" type="button" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas postagens</button>
+
+          <button class="nav-link navs-tabs" id="nav-temasPostagens-tab" data-bs-toggle="tab" data-bs-target="#temasPostagens" type="button" role="tab" aria-controls="nav-temasPostagens" aria-selected="false">Postagens por tema</button>
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+
+        <div class="tab-pane fade show active" id="nav-todasPostagens-tab" role="tabpanel" aria-labelledby="nav-todasPostagens">Todas as postagens</div>
+
+        <div class="tab-pane fade" id="nav-minhasPostagens-tab" role="tabpanel" aria-labelledby="nav-minhasPostagens">Minhas postagens</div>
+
+        <div class="tab-pane fade" id="nav-temasPostagens-tab" role="tabpanel" aria-labelledby="nav-temasPostagens">Postagens por tema</div>
+
+      </div>
+
+</div>
+

@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 ul.social-network{
     list-style: none;
     padding: 0;
@@ -26,9 +29,14 @@ ul.social-network li{
     color:#0a66c2;
 }
 .bg-footer{
-    background-color: rgba(28, 26, 99, 0.741) ;
+    background-color: #523d83 ;
 }
 
 .bg-copyright{
     background-color: rgb(26, 24, 31) !important;
+}
+
+h4{
+font-family: 'VT323', monospace; 
+font-size: 20pt;
 }

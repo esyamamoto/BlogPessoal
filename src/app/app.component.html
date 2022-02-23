@@ -1,9 +1,9 @@
-<!--
 
-<app-rodape></app-rodape>
+
+ <app-menu *ngIf="auth.logado()"></app-menu>   <!-- só aparece se tiver logado-->
+
+
  <router-outlet></router-outlet>
-<app-cadastrar></app-cadastrar>
-<app-entrar></app-entrar> 
-<app-bem-vinde></app-bem-vinde>
- -->
- <router-outlet></router-outlet>
+
+
+ <app-rodape *ngIf="auth.logado()"></app-rodape>    <!-- só aparece se tiver logado-->

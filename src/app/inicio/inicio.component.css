@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+.bg-inicio {
+    background-image   : url(https://thumbs.gfycat.com/HugeVengefulAmericanbittern-max-1mb.gif);
+    min-height         : 652px;
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    display            : flex;
+    align-items        : center;
+}
+
+.txt {
+    color      : aliceblue;
+    font-family: 'VT323', monospace;
+}
+
+.fs-50 {
+    font-size: 45pt;
+
+}
+
+.fs-20 {
+    font-size: 15pt;
+}
+
+
+.btn-post {
+    font-family     : 'VT323', monospace;
+    background-color: darkgray;
+    font-size       : 15pt;
+    font-weight     : bold;
+    margin-right    : 15px;
+}
+
+.btn-post:hover {
+    color: #dc0a2d;
+
+}
+
+.btn-see {
+    font-family     : 'VT323', monospace;
+    font-size       : 15pt;
+    background-color: darkgray;
+    font-weight     : bold;
+}
+
+.btn-see:hover {
+    color: #dc0a2d;
+}
+
+.gameboy {
+    width     : 500px;
+    margin-top: 0;
+}
+
+.navs-tabs {
+    font-family: 'VT323', monospace;
+    color      : #523d83;
+    font-weight: bold;
+    font-size  : 14pt;
+}
