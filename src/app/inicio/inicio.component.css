@@ -9,13 +9,14 @@
     background-size    : cover;
     display            : flex;
     align-items        : center;
-    opacity: 0,2;
+    opacity            : 0, 2;
+
 }
 
 .txt {
     color      : aliceblue;
     font-family: 'VT323', monospace;
-    font-size: 35pt;
+    font-size  : 35pt;
     font-weight: bold;
     text-shadow: 3px 3px black;
 }
@@ -31,27 +32,56 @@
 
 
 .btn-post {
-    font-family     : 'VT323', monospace;
-    background-color: darkgray;
-    font-size       : 15pt;
-    font-weight     : bold;
-    margin-right    : 15px;
-}
-
-.btn-post:hover {
-    color: #dc0a2d;
-
+    font-family   : 'VT323', monospace;
+    font-size     : 15pt;
+    font-weight   : bold;
+    margin-right  : 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition    : 0.5s;
+    position      : absolute;
+    flex-direction: column;
+    text-align    : center;
+    top           : 100px;
+    line-height   : 30px;
 }
 
 .btn-see {
-    font-family     : 'VT323', monospace;
-    font-size       : 15pt;
-    background-color: darkgray;
-    font-weight     : bold;
+    font-family   : 'VT323', monospace;
+    font-size     : 15pt;
+    font-weight   : bold;
+    margin-left   : 65px;
+    margin-top    : 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition    : 0.5s;
+    position      : absolute;
+    flex-direction: column;
+    text-align    : center;
+    top           : 100px;
+    line-height   : 30px;
 }
 
-.btn-see:hover {
-    color: #dc0a2d;
+
+.btn:hover {
+    background      : #730bec url(../../assets/img/pixel2.png);
+    color           : #ffff;
+    transition-delay: 0.5s;
+    background-size : auto;
+    animation       : animate 0.8s steps(8) forwards;
+}
+
+
+
+@keyframes animate {
+    0% {
+        background-position-y: 0px;
+    }
+
+    100% {
+        background-position-y: -480px;
+    }
+
 }
 
 .gameboy {
@@ -66,52 +96,52 @@
     font-size  : 14pt;
 }
 
-.modal-bg{
-box-shadow: 20px 20px 58px rgba(82, 61, 131, 0.25) ;
- border-top: 1px solid rgba(82, 61, 131, 0.5);
- border-right: 1px solid rgba(82, 61, 131, 0.5);
- backdrop-filter: blur(8px);
+.modal-bg {
+    box-shadow     : 20px 20px 58px rgba(82, 61, 131, 0.25);
+    border-top     : 1px solid rgba(82, 61, 131, 0.5);
+    border-right   : 1px solid rgba(82, 61, 131, 0.5);
+    backdrop-filter: blur(8px);
 }
 
-.bg-post{
-    
-    box-shadow: 20px 20px 58px rgba(82, 61, 131, 0.25);
-    border-top: 1px solid rgba(82, 61, 131, 0.5);
-    border-right: 1px solid rgba(82, 61, 131, 0.5);
-    backdrop-filter: blur(8px); 
+.bg-post {
+
+    box-shadow         : 20px 20px 58px rgba(82, 61, 131, 0.25);
+    border-top         : 1px solid rgba(82, 61, 131, 0.5);
+    border-right       : 1px solid rgba(82, 61, 131, 0.5);
+    backdrop-filter    : blur(8px);
     background-image   : url(https://thumbs.gfycat.com/HugeVengefulAmericanbittern-max-1mb.gif);
     background-position: center;
     background-repeat  : no-repeat;
     background-size    : cover;
 }
 
-.btn-confirm{
-font-size: 15pt;
-}
-
-.btn-cancel{
+.btn-confirm {
     font-size: 15pt;
 }
 
-.modal-title{
-    font-size: 35pt;
-    color: aliceblue;
+.btn-cancel {
+    font-size: 15pt;
+}
+
+.modal-title {
+    font-size  : 35pt;
+    color      : aliceblue;
     font-weight: bold;
     text-shadow: 3px 3px black;
 }
 
-.form-group{
-    font-size: 20pt;
-    text-shadow: 2px 2px 2px  black;
+.form-group {
+    font-size  : 20pt;
+    text-shadow: 2px 2px 2px black;
     font-weight: bold;
 }
 
-.cadastro-tema{
+.cadastro-tema {
     text-decoration: none;
-    color: #a179ff;
+    color          : #a179ff;
 }
 
-.btn-confirm:hover{
+.btn-confirm:hover {
     background-color: #a179ff;
-    color: black;
+    color           : black;
 }
