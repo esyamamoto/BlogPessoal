@@ -1,0 +1,50 @@
+.bg{
+    background-image   : url(https://64.media.tumblr.com/adcc0cc94872c2e7b3c55d99b473ee79/tumblr_o2vkhtONOR1u3e4cro3_r5_540.gifv);
+    min-height         : 652px;
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    display            : flex;
+    align-items        : center;
+    opacity            : 0, 2;
+
+}
+
+/*botao editar e apagar de tema*/
+.btn {
+    font-family   : 'VT323', monospace;
+    font-size     : 15pt;
+    font-weight   : bold;
+    margin-right  : 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition    : 0.5s;
+    line-height   : 30px;
+}
+
+.btn-edit:hover {
+    background      : #730bec url(../../assets/img/pixel2.png);
+    color           : #ffff;
+    transition-delay: 0.5s;
+    background-size : auto;
+    animation       : animate 0.8s steps(8) forwards;
+}
+
+.btn-delete:hover{
+    background      : #eb0e0e url(../../assets/img/pixel.png);
+    color           : #ffff;
+    transition-delay: 0.5s;
+    background-size : auto;
+    animation       : animate 0.8s steps(8) forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 0px;
+    }
+
+    100% {
+        background-position-y: -480px;
+    }
+
+}
