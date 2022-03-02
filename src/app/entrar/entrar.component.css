@@ -30,19 +30,9 @@
     align-items: center;
 }
 
-.btn{
-    background-color: #FF3534;
-    color: white;
-}
-
-.btn:hover{
-    background-color: #ffee06 ;
-    color: black;
-}
-
 .box{
     box-sizing: border-box;
-    box-shadow: 2px 2px 2px 2px #FF3534;
+    box-shadow: 2px 2px 2px 2px #f34534;
     border-radius: 5px;
 
 }
@@ -77,15 +67,37 @@ box-shadow: 20px 20px 58px rgba(225, 7, 7, 0.25);
 
 -webkit-backdrop-filter: blur(8px);
 }
-.jolteon{
 
-    animation: 1s move;
+.btn {
+    font-family   : 'VT323', monospace;
+    font-size     : 15pt;
+    font-weight   : bold;
+    margin-right  : 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition    : 0.5s;
+    line-height   : 30px;
+    margin-left: 20px;
+    background-color: rgba(255, 251, 0, 0.658);
 }
 
-@keyframes move{
-    from{left: 5%;
+
+
+.btn:hover{
+    background      : #f34534 url(../../assets/img/pixel2.png);
+    color           : #ffff;
+    transition-delay: 0.5s;
+    background-size : auto;
+    animation       : animate 0.8s steps(8) forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 0px;
     }
-    to{
-        left: 85%;
+
+    100% {
+        background-position-y: -480px;
     }
+
 }

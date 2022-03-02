@@ -1,5 +1,5 @@
 .bg{
-    background-image   : url(https://64.media.tumblr.com/adcc0cc94872c2e7b3c55d99b473ee79/tumblr_o2vkhtONOR1u3e4cro3_r5_540.gifv);
+    background-image   : url(https://storage.ko-fi.com/cdn/useruploads/display/78344505-dc22-4750-876b-a689ca7669b1_thingsthatroll.gif);
     min-height         : 652px;
     background-position: center;
     background-repeat  : no-repeat;
@@ -8,6 +8,24 @@
     align-items        : center;
     opacity            : 0, 2;
 
+}
+.text{
+    color      : aliceblue;
+    font-family: 'VT323', monospace;
+    font-size  : 35pt;
+    font-weight: bold;
+    text-shadow: 3px 3px black;
+}
+
+
+
+
+.text1{
+    color      : rgb(0, 0, 0);
+    font-family: 'VT323', monospace;
+    font-size  : 35pt;
+    font-weight: bold;
+    text-shadow: 3px 3px rgba(255, 7, 7, 0.829);  
 }
 
 /*botao editar e apagar de tema*/
@@ -23,7 +41,7 @@
 }
 
 .btn-edit:hover {
-    background      : #730bec url(../../assets/img/pixel2.png);
+    background      : #4ce5f5 url(../../assets/img/pixel.png);
     color           : #ffff;
     transition-delay: 0.5s;
     background-size : auto;
@@ -31,12 +49,14 @@
 }
 
 .btn-delete:hover{
-    background      : #eb0e0e url(../../assets/img/pixel.png);
+    background      : #f34534 url(../../assets/img/pixel2.png);
     color           : #ffff;
     transition-delay: 0.5s;
     background-size : auto;
     animation       : animate 0.8s steps(8) forwards;
 }
+
+
 
 @keyframes animate {
     0% {
@@ -48,3 +68,5 @@
     }
 
 }
+
+
