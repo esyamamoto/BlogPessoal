@@ -17,15 +17,12 @@
     text-shadow: 3px 3px black;
 }
 
-
-
-
 .text1{
     color      : rgb(0, 0, 0);
     font-family: 'VT323', monospace;
     font-size  : 35pt;
     font-weight: bold;
-    text-shadow: 3px 3px rgba(255, 7, 7, 0.829);  
+    
 }
 
 /*botao editar e apagar de tema*/
@@ -38,6 +35,19 @@
     letter-spacing: 2px;
     transition    : 0.5s;
     line-height   : 30px;
+}
+.btn-cadastro{
+    background-color: rgba(255, 251, 0, 0.877);
+    color: black;
+}
+
+
+.btn-cadastro:hover{
+    background      : #f34534 url(../../assets/img/pixel2.png);
+    color           : #ffff;
+    transition-delay: 0.5s;
+    background-size : auto;
+    animation       : animate 0.8s steps(8) forwards;
 }
 
 .btn-edit:hover {

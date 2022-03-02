@@ -20,14 +20,17 @@
     font-weight: bold;
     text-shadow: 3px 3px black;
 }
+.text-bv{
+    color: #ffffff!important; 
+}
 
 .fs-50 {
-    font-size: 45pt;
+    font-size: 50pt;
 
 }
 
-.fs-20 {
-    font-size: 15pt;
+.fs-24 {
+    font-size: 28pt!important;
 }
 
 
