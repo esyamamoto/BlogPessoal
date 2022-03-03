@@ -1,5 +1,5 @@
 .bg{
-    background-image   : url(https://storage.ko-fi.com/cdn/useruploads/display/78344505-dc22-4750-876b-a689ca7669b1_thingsthatroll.gif);
+    background-image   : url(https://i.gifer.com/TtU4.gif);
     min-height         : 652px;
     background-position: center;
     background-repeat  : no-repeat;
@@ -9,6 +9,15 @@
     opacity            : 0, 2;
 
 }
+.txt-home{
+margin-bottom: 0;
+font-family: 'VT323', monospace;
+font-size: 20pt;
+text-decoration: none;
+margin-top: 0;
+color: brown;
+}
+
 .text{
     color      : aliceblue;
     font-family: 'VT323', monospace;
@@ -37,8 +46,9 @@
     line-height   : 30px;
 }
 .btn-cadastro{
-    background-color: rgba(255, 251, 0, 0.877);
+    background-color: rgb(255, 251, 0);
     color: black;
+    margin-left: 45px;
 }
 
 
