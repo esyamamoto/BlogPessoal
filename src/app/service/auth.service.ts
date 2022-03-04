@@ -18,10 +18,12 @@ export class AuthService {
 
   cadastrar(user: User): Observable<User> {
     return this.http.post<User>('http://localhost:8080/usuarios/cadastrar' , user)
-
   }
-
   /* Como eu sei se o meu user está logado em minha plataforma? Quando existe um token gerado pelo back-end no meu environment. */
+
+  getByIdUser(id: number): Observable<User>{
+    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`)
+  }
 
   logado(){
     let ok: boolean = false
