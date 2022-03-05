@@ -13,9 +13,6 @@
         </div>
 
 
-
-
-
         <div class="col-md-4 d-flex justify-content-center">
             
             <img class="gameboy" src="../../assets/img/gameboy7.png" alt="">
@@ -23,17 +20,9 @@
                    <button class="btn btn-1" data-toggle="modal" data-target="#novaPostagem">Nova postagem</button> 
                    <a class="btn btn-outline btn-2" href="#postagens">Ver postagens</a>
         </div>
-
-
         
     </div>
-
-
-
 </div>
-
-
-
 
 
 
@@ -42,7 +31,7 @@
         <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
           <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as Postagens</a>
 
-          <a  (click)='findByIdUser()'  class="nav-item nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
+          <a (click)='findByIdUser()'  class="nav-item nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
 
 
           <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por Tema</a>
@@ -86,6 +75,12 @@
                       <p class="card-text mt-3">{{item.texto}}</p>
                       <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}} </small></p>
 
+                        <a routerLink="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                        <a routerLink="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+
+
+
+
                     </div>
                   </div>
 
@@ -102,10 +97,8 @@
                 <div class="card text-center" *ngFor=' let item of tema.postagem' >
                     <div class="card-body">
                       <h5 class="card-title m-0">{{item.titulo}}</h5>
-    
                       <p class="card-text mt-3">{{item.texto}}</p>
                       <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}} </small></p>
-
                       <p class="card-text"><small class="text-muted">by: {{item.usuario.nomeCompleto}}</small></p>
 
 
