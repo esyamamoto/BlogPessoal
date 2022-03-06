@@ -26,48 +26,48 @@ export class PostagemEditComponent implements OnInit {
 
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
 
-    window.scroll(0,0)
+    window.scroll(0, 0)
 
-    if(environment.token == ''){
+    if (environment.token == '') {
       alert('Faça o login novamente')
       this.router.navigate(['/login'])
+    }
+
+    let id = this.route.snapshot.params['id']
+    this.findByIdPostagem(id)
+    this.findAllTemas()
   }
 
-  let id = this.route.snapshot.params['id']
-  this.findByIdPostagem(id)
-  this.findAllTemas()
-}
+  findByIdPostagem(id: number) {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+      this.postagem = resp
+    })
+  }
 
-findByIdPostagem(id:number){
-  this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
-    this.postagem = resp
-  })
-}
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp
+    })
+  }
 
-findByIdTema(){
-  this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
-    this.tema = resp
-  })
-}
+  findAllTemas() {
+    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+  }
 
-findAllTemas(){
-  this.temaService.getAllTema().subscribe((resp: Tema[]) => {
-    this.listaTemas = resp
-  })
-}
+  atualizar() {
+    this.tema.id = this.idTema
+    this.postagem.tema = this.tema
 
-atualizar(){
-  this.tema.id = this.idTema
-  this.postagem.tema = this.tema
-
-  this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
-    this.postagem = resp
-    alert('Postagem Atualizada com sucesso!!')
-    this.router.navigate(['/inicio'])
-  })
-}
+    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert('Postagem Atualizada com sucesso!!')
+      this.router.navigate(['/inicio'])
+    })
+  }
 
 
 }

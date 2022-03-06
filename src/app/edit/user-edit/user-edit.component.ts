@@ -35,34 +35,34 @@ export class UserEditComponent implements OnInit {
 
   confirmSenha(event: any) {
     this.confirmarSenha = event.target.value
-}
-tipoUser(event: any) {
-  this.tipoUsuario = event.target.value
-}
-
-atualizar(){
-  this.user.tipo = this.tipoUsuario
-  
-  if(this.user.senha != this.confirmarSenha){
-    alert('As senhas não coincidem')
-  } else{
-    this.authService.cadastrar(this.user).subscribe((resp: User) => {
-      this.user = resp
-      this.router.navigate(['/inicio'])
-      alert('Usuário atualizado com sucesso, faça o login novamente!')
-      environment.token = ''
-      environment.nomeCompleto = ''
-      environment.foto = ''
-      environment.id = 0
-      this.router.navigate(['/entrar'])
-
-    })  /* ele pega o usuario da linha 13 que foi preenchido nos ngModel, seja mandado pro servidor*/
   }
-}
+  tipoUser(event: any) {
+    this.tipoUsuario = event.target.value
+  }
 
-findByIdUser(id:number){
-  this.authService.getByIdUser(id).subscribe((resp: User)=> {
-    this.user = resp
-  })
-}
+  atualizar() {
+    this.user.tipo = this.tipoUsuario
+
+    if (this.user.senha != this.confirmarSenha) {
+      alert('As senhas não coincidem')
+    } else {
+      this.authService.atualizar(this.user).subscribe((resp: User) => {
+        this.user = resp
+        this.router.navigate(['/inicio'])
+        alert('Usuário atualizado com sucesso, faça o login novamente!')
+        environment.token = ''
+        environment.nomeCompleto = ''
+        environment.foto = ''
+        environment.id = 0
+        this.router.navigate(['/entrar'])
+
+      })  /* ele pega o usuario da linha 13 que foi preenchido nos ngModel, seja mandado pro servidor*/
+    }
+  }
+
+  findByIdUser(id: number) {
+    this.authService.getByIdUser(id).subscribe((resp: User) => {
+      this.user = resp
+    })
+  }
 }
