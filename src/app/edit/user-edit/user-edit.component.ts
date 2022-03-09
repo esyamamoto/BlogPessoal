@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/User';
+import { AlertaService } from 'src/app/service/alerta.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-user-edit',
@@ -19,7 +21,8 @@ export class UserEditComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alerta: AlertaService
   ) { }
   ngOnInit() {
     window.scroll(0, 0)
@@ -44,12 +47,45 @@ export class UserEditComponent implements OnInit {
     this.user.tipo = this.tipoUsuario
 
     if (this.user.senha != this.confirmarSenha) {
-      alert('As senhas não coincidem')
+      Swal.fire({
+        title: 'As senhas não coincidem!',
+        showConfirmButton: false,
+        timer: 3000,
+        icon: 'error',
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        background: '#fff url(/images/trees.png)',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("https://c.tenor.com/dNtJSujn-lYAAAAj/run-pikachu.gif")
+          left top
+          no-repeat
+        `
+      })
+      
     } else {
       this.authService.atualizar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/inicio'])
-        alert('Usuário atualizado com sucesso, faça o login novamente!')
+        
+        Swal.fire({
+          title: 'Usuário atualizado com sucesso!',
+          showConfirmButton: false,
+          timer: 3000,
+          icon: 'success',
+          width: 600,
+          padding: '3em',
+          color: '#716add',
+          background: '#fff url(/images/trees.png)',
+          backdrop: `
+            rgba(0,0,123,0.4)
+            url("https://c.tenor.com/dNtJSujn-lYAAAAj/run-pikachu.gif")
+            left top
+            no-repeat
+          `
+        })
+
         environment.token = ''
         environment.nomeCompleto = ''
         environment.foto = ''

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../model/User';
+import { AlertaService } from '../service/alerta.service';
 import { AuthService } from '../service/auth.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -18,7 +20,8 @@ export class CadastrarComponent implements OnInit {
 
   constructor( /*injeção de dependencia*/
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alerta: AlertaService
   ) { }
 
   ngOnInit() {
@@ -36,12 +39,44 @@ window.scroll(0,0)
   cadastrar(){
     this.user.tipo = this.tipo
     if(this.user.senha != this.confirmarSenha){
-      alert('As senhas não coincidem')
+   
+      Swal.fire({
+        title: 'Senhas não coincidem!',
+        showConfirmButton: false,
+        timer: 3000,
+        icon: 'info',
+        width: 600,
+        padding: '3em',
+        color: '#f34534',
+        background: '#fff url(/images/trees.png)',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("https://c.tenor.com/dNtJSujn-lYAAAAj/run-pikachu.gif")
+          left top
+          no-repeat
+        `
+      })
+      
     } else{
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/entrar'])
-        alert('Usuário cadastrado com sucesso!')
+        Swal.fire({
+          title: 'Usuário cadastrado com sucesso!',
+          showConfirmButton: false,
+          timer: 3000,
+          icon: 'success',
+          width: 600,
+          padding: '3em',
+          color: '#716add',
+          background: '#fff url(/images/trees.png)',
+          backdrop: `
+            rgba(0,0,123,0.4)
+            url("https://c.tenor.com/dNtJSujn-lYAAAAj/run-pikachu.gif")
+            left top
+            no-repeat
+          `
+        })
       })  /* ele pega o usuario da linha 13 que foi preenchido nos ngModel, seja mandado pro servidor*/
     }
   }

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from 'src/app/model/Tema';
+import { AlertaService } from 'src/app/service/alerta.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-tema-delete',
@@ -18,7 +20,8 @@ export class TemaDeleteComponent implements OnInit {
 
     private temaService: TemaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alerta: AlertaService
 
   ) { }
 
@@ -39,7 +42,22 @@ findByIdTema(id: number) {
 
 apagar() {
   this.temaService.deleteTema(this.id).subscribe(() => {
-    alert('Tema apagado com sucesso!!')
+    Swal.fire({
+      title: 'Tema apagado com sucesso!',
+      showConfirmButton: false,
+      timer: 3000,
+      icon: 'success',
+      width: 600,
+      padding: '3em',
+      color: '#716add',
+      background: '#fff url(/images/trees.png)',
+      backdrop: `
+        rgba(0,0,123,0.4)
+        url("https://c.tenor.com/dNtJSujn-lYAAAAj/run-pikachu.gif")
+        left top
+        no-repeat
+      `
+    })
     this.router.navigate(['/tema'])
   })
 }

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
+import { AlertaService } from '../service/alerta.service';
 import { AuthService } from '../service/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-entrar',
@@ -15,7 +17,8 @@ export class EntrarComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alerta: AlertaService
 
   ) { }
 
@@ -49,7 +52,22 @@ export class EntrarComponent implements OnInit {
 
     }, erro =>{
       if(erro.status != 200){
-        alert('Usuário ou senha estão incorretos!')
+        Swal.fire({
+          title: 'Usuário ou senha estão incorretos!',
+          showConfirmButton: false,
+          timer: 3000,
+          icon: 'error',
+          width: 600,
+          padding: '3em',
+          color: '#716add',
+          background: '#fff url(/images/trees.png)',
+          backdrop: `
+            rgba(0,0,123,0.4)
+            url("https://c.tenor.com/dNtJSujn-lYAAAAj/run-pikachu.gif")
+            left top
+            no-repeat
+          `
+        })
       }
     })
   }

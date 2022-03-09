@@ -16,23 +16,28 @@ export class PostagemService {
   } /* httpheaders : Para inserir o token no Authorization e no Header da minha requisição.*/
 
   getAllPostagens(): Observable<Postagem[]> {
-    return this.http.get<Postagem[]>('http://localhost:8080/postagem', this.token)
+    return this.http.get<Postagem[]>('https://sayuriblog.herokuapp.com/postagem', this.token)
   }
   /*Observable nos metódos que irão chamar os end-points Para garantir que o tipo da variável será passado corretamente.*/
 
   getByIdPostagem(id: number): Observable<Postagem> {
-    return this.http.get<Postagem>(`http://localhost:8080/postagem/${id}`, this.token)
+    return this.http.get<Postagem>(`https://sayuriblog.herokuapp.com/postagem/${id}`, this.token)
+  }
+
+  getByTituloPostagem(titulo: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://sayuriblog.herokuapp.com/postagem/titulo/${titulo}`, this.token)
+
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem> {
-    return this.http.post<Postagem>('http://localhost:8080/postagem', postagem, this.token)
+    return this.http.post<Postagem>('https://sayuriblog.herokuapp.com/postagem', postagem, this.token)
   }
 
   putPostagem(postagem: Postagem): Observable<Postagem> {
-    return this.http.put<Postagem>('http://localhost:8080/postagem', postagem, this.token)
+    return this.http.put<Postagem>('https://sayuriblog.herokuapp.com/postagem', postagem, this.token)
   }
 
   deletePostagem(id: number) {
-    return this.http.delete(`http://localhost:8080/postagem/${id}`, this.token)
+    return this.http.delete(`https://sayuriblog.herokuapp.com/postagem/${id}`, this.token)
   }
 }

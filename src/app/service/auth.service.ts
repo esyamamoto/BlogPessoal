@@ -15,20 +15,24 @@ export class AuthService {
  
 
   entrar(userLogin: UserLogin):Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin) /*pq post? ususario controller está no post*/
+    return this.http.post<UserLogin>('https://sayuriblog.herokuapp.com/usuarios/logar', userLogin) /*pq post? ususario controller está no post*/
   }
 
   cadastrar(user: User): Observable<User> {
-    return this.http.post<User>('http://localhost:8080/usuarios/cadastrar' , user)
+    return this.http.post<User>('https://sayuriblog.herokuapp.com/usuarios/cadastrar' , user)
   }
   /* Como eu sei se o meu user está logado em minha plataforma? Quando existe um token gerado pelo back-end no meu environment. */
 
   atualizar(user: User): Observable<User> {
-    return this.http.put<User>('http://localhost:8080/usuarios/atualizar' , user)
+    return this.http.put<User>('https://sayuriblog.herokuapp.com/usuarios/atualizar' , user)
   }
 
   getByIdUser(id: number): Observable<User>{
-    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`)
+    return this.http.get<User>(`https://sayuriblog.herokuapp.com/usuarios/${id}`)
+  }
+
+  putUsuario(user: User): Observable<User> {
+    return this.http.put<User>('https://sayuriblog.herokuapp.com/usuarios/atualizar', user)
   }
 
   logado(){
@@ -41,5 +45,14 @@ export class AuthService {
     return ok
   }
 
+  adm(){
+    let ok: boolean = false
+    
+    if (environment.tipo == 'adm'){
+      ok = true
+    }
+    
+    return ok
+  }
 
 }

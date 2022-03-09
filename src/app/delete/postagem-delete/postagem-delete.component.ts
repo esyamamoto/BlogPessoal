@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
+import { AlertaService } from 'src/app/service/alerta.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-postagem-delete',
@@ -20,14 +22,15 @@ export class PostagemDeleteComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private postagemService: PostagemService
-  
+    private postagemService: PostagemService,
+    private alerta: AlertaService
+    
   ) { }
 
 
   ngOnInit(){
     if(environment.token == ''){
-      alert('Faça o login novamente')
+      this.alerta.showAlertDanger('Faça o login novamente')
       this.router.navigate(['/entrar'])
     }
 
@@ -43,7 +46,22 @@ export class PostagemDeleteComponent implements OnInit {
 
   apagar(){
     this.postagemService.deletePostagem(this.idPost).subscribe(() => {
-      alert('Postagem Apagada com Sucesso!!')
+      Swal.fire({
+        title: 'Postagem apagada com sucesso!',
+        showConfirmButton: false,
+        timer: 3000,
+        icon: 'success',
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        background: '#fff url(/images/trees.png)',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("https://c.tenor.com/dNtJSujn-lYAAAAj/run-pikachu.gif")
+          left top
+          no-repeat
+        `
+      })
       this.router.navigate(['/inicio'])
     })
   }
