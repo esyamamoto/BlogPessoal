@@ -70,7 +70,7 @@ export class UserEditComponent implements OnInit {
         this.router.navigate(['/inicio'])
         
         Swal.fire({
-          title: 'Usuário atualizado com sucesso! Entre novamente!git ',
+          title: 'Usuário atualizado com sucesso! Entre novamente!',
           showConfirmButton: false,
           timer: 3000,
           icon: 'success',
