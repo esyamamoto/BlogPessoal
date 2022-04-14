@@ -1,27 +1,66 @@
-# BlogPessoalFrontEnd
+## Olá! 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+## 🔧 Etapas do Desenvolvimento do Back-end:  
+- Definição do escopo do projeto;
+- Modelagem do Banco de Dados;
+- Criação do projeto Maven usando o Spring Boot;
+- Desenvolvimento das camadas de entidade,repository,controller,service,security e test do projeto;
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 🔧 Etapas do Desenvolvimento do Front-End:
+- Criando os componentes do Front-End (- Navbar - Footer - Página de Login - Página de usuário - Página de postagem - Página de atualização de usuário -Página de atualização de postagem - Página de excluir postagem - Página de adicionar temas );
+- Ligação do Back com o Front ( Ligação na pagina do Login e do Cadastro );
+- Implementação do consumo HTTP das páginas de postagem e usuário;
+- 
+  
+## 🔧 Tecnologias usadas:
+- JavaScript;
+- Angular;
+- TypeScript;
+- HTML;
+- CSS;
+- Bootstrap;
+- Java;
+- Spring Framework;
+- MySQL;
+  
 
-## Code scaffolding
+## Ele já está pronto e rodando neste link: https://sayuriblog.netlify.app/#/entrar
+## Capturas de Tela do projeto:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Tela Bem-Vinde/Início
 
-## Build
+<p align="center">
+  <img src="https://i.imgur.com/FnQ9nza.png" height="300" width="500">
+</p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<hr>
+  
+### Entrar / Cadastro
 
-## Running unit tests
+<p align="center">
+  <img src="https://i.imgur.com/zqOpL40.png" height="300" width="500">
+  <img src="https://i.imgur.com/5nWPlcP.png" height="300" width="500">
+</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<hr>
 
-## Running end-to-end tests
+### Página de postagem (editar e deletar)/ Página de temas /Página de atualizar usuário
+<p align="center">
+  <img src="https://i.imgur.com/UWmvWqR.png" height="300" width="500">
+  <img src="https://i.imgur.com/XxgsiEs.png" height="300" width="500">
+ <img src="https://i.imgur.com/xMaJpb7.png" height="300" width="500">
+  <img src="https://i.imgur.com/B6YPUxA.png" height="300" width="500">
+   <img src="https://i.imgur.com/Xt6nxFD.png" height="300" width="500">
+  <img src="https://i.imgur.com/cDlNHtl.png" height="300" width="500">
+</p>
+  
+<hr>
+  
+### Confirmação de funcionalidades estilizado
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<p align="center">
+  <img src="https://i.imgur.com/wgB6t6Z.png" height="300" width="500">
+<img src="https://i.imgur.com/bwyC9xj.png" height="300" width="500">
+</p>
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
