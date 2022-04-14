@@ -1,4 +1,5 @@
 ## Olá! 
+- Este é um projeto individual feito durante o Bootcamp da Generation Brasil 
 
 ## 🔧 Etapas do Desenvolvimento do Back-end:  
 - Definição do escopo do projeto;
@@ -11,8 +12,8 @@
 - Criando os componentes do Front-End (- Navbar - Footer - Página de Login - Página de usuário - Página de postagem - Página de atualização de usuário -Página de atualização de postagem - Página de excluir postagem - Página de adicionar temas );
 - Ligação do Back com o Front ( Ligação na pagina do Login e do Cadastro );
 - Implementação do consumo HTTP das páginas de postagem e usuário;
-- 
-  
+
+ 
 ## 🔧 Tecnologias usadas:
 - JavaScript;
 - Angular;
